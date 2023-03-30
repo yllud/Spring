@@ -12,10 +12,6 @@ body{
 </style>
 </head>
 <body>
-아이디: ${bag.id}<br>
-패스워드: ${bag.pw}<br>
-이름: ${bag.name}<br>
-전화번호: ${bag.tel}<br>
-
+로그인 요청
 </body>
 </html>
