@@ -5,17 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
-body{
-	background: yellow;
-}
-</style>
 </head>
 <body>
-${id} 로그인 성공<br>
-
-<img alt="" src="resources/img/yes.jpg" width="300" height="300">
-
-<a href="login.jsp">전페이지로</a>
+<%
+	session.setAttribute("view", 0);
+%>
+<hr color="red">
+<a href="page04.jsp">세션 보러가기</a>
 </body>
 </html>

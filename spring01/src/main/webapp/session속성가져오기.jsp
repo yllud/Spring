@@ -5,17 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
-body{
-	background: yellow;
-}
-</style>
 </head>
 <body>
-${id} 로그인 성공<br>
 
-<img alt="" src="resources/img/yes.jpg" width="300" height="300">
+로그인한 사람 id: <%=session.getAttribute("user") %><br>
+오늘 방문횟수 <%=session.getAttribute("count") %>
 
-<a href="login.jsp">전페이지로</a>
 </body>
 </html>

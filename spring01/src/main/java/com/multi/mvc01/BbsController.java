@@ -1,7 +1,10 @@
 package com.multi.mvc01;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -35,9 +38,19 @@ public class BbsController {
 	}
 	
 	@RequestMapping("bbs_one")
-	public void bbs_one(int no) {
+	public void bbs_one(int no,Model model) {
 		System.out.println("게시판 검색 요청됨");
 		System.out.println(no);
+		BbsVO bag=dao.select(no);
+		model.addAttribute("bag", bag);
+	}
+	
+	@RequestMapping("bbs_list")
+	public void bbs_list(Model model) {
+		System.out.println("리스트요청");
+		ArrayList<BbsVO> list=dao.list();
+		model.addAttribute("list", list);
+		
 	}
 	
 	

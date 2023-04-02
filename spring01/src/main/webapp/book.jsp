@@ -26,6 +26,14 @@
 		<button type="submit">서버로 전송</button>
 	</form>
 	<hr color="red">
+	
+	<hr color="red">
+		<h3>북마크 리스트 화면입니다.</h3>
+	<hr color="red">
+	<form action="bookList" method="get">
+		<button type="submit">리스트보기</button>
+	</form>
+	<hr color="red">
 
 
 

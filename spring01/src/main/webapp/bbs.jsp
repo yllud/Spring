@@ -42,6 +42,11 @@
 	</form>
 	<hr color="red">
 
-	<button type="button">먹통버튼(아무 기능이 없음)</button>
+	<h3>게시판리스트 화면입니다.</h3>
+	<hr color="red">
+	<form action="bbs_list" method="get">
+		<button type="submit">리스트 보기</button>
+	</form>
+	<hr color="red">
 </body>
 </html>

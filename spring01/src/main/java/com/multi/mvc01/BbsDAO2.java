@@ -179,8 +179,8 @@ public class BbsDAO2 {
 				System.out.println("There are select results");
 				int no2 = rs.getInt(1);
 				String title = rs.getString(2);
-				String writer = rs.getString(3);
-				String content = rs.getString(4);
+				String writer = rs.getString(4);
+				String content = rs.getString(3);
 				
 
 				bag = new BbsVO();

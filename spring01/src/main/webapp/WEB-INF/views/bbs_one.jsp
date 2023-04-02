@@ -12,6 +12,10 @@ body{
 </style>
 </head>
 <body>
-게시판검색 요청
+<h3>게시판검색</h3>
+번호: ${bag.no}<br>
+제목: ${bag.title}<br>
+작성자: ${bag.writer}<br>
+내용: ${bag.content}<br>
 </body>
 </html>

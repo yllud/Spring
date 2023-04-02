@@ -5,17 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
-body{
-	background: yellow;
-}
-</style>
 </head>
 <body>
-${id} 로그인 성공<br>
 
-<img alt="" src="resources/img/yes.jpg" width="300" height="300">
+<%
+	session.setAttribute("count", 0);
+	session.setAttribute("user", "root");
+%>
 
-<a href="login.jsp">전페이지로</a>
+<hr>서버에 세션을 심음
+<a href="session속성가져오기2.jsp">세션리스트 가져오기</a>
 </body>
 </html>

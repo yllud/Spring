@@ -1,5 +1,9 @@
 package com.multi.mvc01;
 
+import java.util.ArrayList;
+
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -43,18 +47,24 @@ public class MemberController {
 		MemberVO bag=dao.one(id);
 		model.addAttribute("bag", bag);
 	}
+	
 	@RequestMapping("list")
-	public void list() {
-		System.out.println("lise요청됨");
+	public void list(Model model) {
+		System.out.println("list요청됨");
+		
+		ArrayList<MemberVO> list=dao.list();
+		model.addAttribute("list", list);
 	}
 	
 	@RequestMapping("login")
-	public String login(MemberVO bag) {
+	public String login(MemberVO bag, HttpSession session) {
 		System.out.println("login요청됨");
 		System.out.println(bag);
 		int result=dao.login(bag);	//로그인 성공하면 1, 아니면 0
 		
+		
 		if(result==1) {
+			session.setAttribute("id", bag.getId());
 			return "login_ok";
 		}else {
 			return "login_no";
