@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -53,14 +54,30 @@ public class BbsController {
 		model.addAttribute("list", list);
 	}
 	
-	
+	@RequestMapping("bbsOne_json")
+	@ResponseBody
+	//view로 넘기지않고 return값으로 bag을 만들어서 전송
+	public BbsVO bbs_one_json(int no) {
+		System.out.println("野껊슣�뻻占쎈솇 野껓옙占쎄퉳 占쎌뒄筌ｏ옙占쎈쭡");
+		System.out.println(no);
+		BbsVO bag=dao.select(no);
+		return bag;
+
+	}
 	
 	@RequestMapping("bbs_list")
 	public void bbs_list(Model model) {
 		//System.out.println("list 불러옴");
 		ArrayList<BbsVO> list=dao.list();
 		model.addAttribute("list", list);
+	}
+	
+	@RequestMapping("bbs_list_json")
+	@ResponseBody
+	public ArrayList<BbsVO> bbs_list_json(){
 		
+		ArrayList<BbsVO> list=dao.list();
+		return list;
 	}
 	
 	@RequestMapping("bbs_list_writer")
