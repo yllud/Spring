@@ -98,12 +98,16 @@ public class MemberController {
 		}
 	}
 	
-	@GetMapping("/address") 
-	public String address() {
-		System.out.println("카카오 API 테스트");
-		
-		return "address";
-	}
+//	@RequestMapping("jsonResponse5")
+//	@ResponseBody // 요청을 받으면 return되는 데이터를 json으로 만들어서 요청하는 곳으로 다시 보냄,
+//	public MapVO kakaoMap() {
+//		MapVO bag = new MapVO();
+//		bag.setLat(37.5117);
+//		bag.setLon(127.0592);
+//		
+//		System.out.println(bag);
+//		return bag;
+//	}
 	
 	
 }
