@@ -20,8 +20,8 @@
 		member where id=#{id}
 	</select>
 
-	<!-- <select id="all" resultType="memberVO"> -->
-	<!-- select * from member -->
-	<!-- </select> -->
+	<select id="all" resultType="memberVO">
+	select * from member
+	</select>
 
 </mapper>

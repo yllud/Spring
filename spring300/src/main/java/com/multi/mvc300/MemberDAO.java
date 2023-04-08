@@ -1,18 +1,11 @@
 package com.multi.mvc300;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.Locale;
+
+import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.ui.Model;
-
-import com.sun.javafx.sg.prism.NGShape.Mode;
 
 @Component
 public class MemberDAO { // CRUD
@@ -54,8 +47,10 @@ public class MemberDAO { // CRUD
 		return bag;
 	}
 	
-//	public ArrayList<MemberVO> list(){
-//		ArrayList<MemberVO> list=my.selectList("member.all");
-//	}
+	public List<MemberVO> list(){
+		List<MemberVO> list=my.selectList("member.all");
+		
+		return list;
+	}
 
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="concert">
+	
+	<insert id="create" parameterType="concertVO">
+		insert into concert values (null, #{title}, #{genre}, #{place})
+	</insert>
+	
+	<update id="up" parameterType="concertVO">
+		update concert set place=#{place} where no=#{no}
+
+	</update>
+	
+	<delete id="del" parameterType="int">
+		delete from concert where no=#{no}
+	</delete>
+	
+	<select id="one" parameterType="int" resultType="concertVO">
+		select * from concert where no=#{no}
+	</select>
+	
+	<select id="all" resultType="concertVO">
+		select * from concert
+	</select>
+	
+
+	
+</mapper>
